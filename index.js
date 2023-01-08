@@ -29,8 +29,8 @@ function writeData(obj) {
 
 app.post('/newData', function(req, res) {
   console.log(req.body);
-  body = JSON.parse(req.body);
-  console.log(body);
+  // body = JSON.parse(req.body);
+  // console.log(body);
   const data = {
     bpm: req.body.bpm,
     spo2: req.body.spo2,
