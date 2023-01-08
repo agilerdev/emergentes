@@ -23,14 +23,12 @@ const appFirebase = initializeApp(firebaseConfig);
 const db = getDatabase(appFirebase);
 function writeData(obj) {
 
-    set(ref(db,'data/' + v4()), obj)
+    set(ref(db,'data/' + Date.now()), obj)
 
   }
 
 app.post('/newData', function(req, res) {
   console.log(req.body);
-  // body = JSON.parse(req.body);
-  // console.log(body);
   const data = {
     bpm: req.body.bpm,
     spo2: req.body.spo2,
