@@ -28,6 +28,7 @@ function writeData(obj) {
   }
 
 app.post('/newData', function(req, res) {
+  console.log(req.body);
   body = JSON.parse(req.body);
   console.log(body);
   const data = {
