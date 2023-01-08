@@ -34,7 +34,7 @@ app.post('/newData', function(req, res) {
     date: Date.now(),
   }
   writeData(data);
-  res.send('ok');
+ return res.send('ok');
 });
 
 app.listen('3000', function(err){
